@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  @apply text-neutral-800 bg-neutral-100;
+}
+
+h1 {
+  @apply text-3xl font-bold text-white py-2 px-4;
+  
+  background: linear-gradient(90deg, #ed1257, #7b17e8);
+  border-radius: 9999px; 
+  max-width: fit-content; 
+  width: auto;
+  -webkit-background-clip: text; /* Ensure the gradient is applied to the text */
+  background-clip: text; /* Ensure the gradient is applied to the text */
+  color: transparent; /* Make text color transparent to show gradient */
+}
+
+
+
+
+.view-container {
+  @apply box-border mx-auto;
+  @apply w-[1000px] max-2xl:w-[900px] max-xl:w-[720px] max-lg:w-[640px] max-md:w-[560px] max-sm:w-[340px];
+}
+
+.reaction-display {
+  @apply absolute;
+  animation: ReactedIconDisplayAnimation 2s linear;
+}
+
+@keyframes ReactedIconDisplayAnimation {
+  0% {
+    opacity: 0;
+    top: -20px;
+    left: -12px;
+  }
+  25% {
+    opacity: 0.2;
+    top: -20px;
+    left: -12px;
+  }
+  50% {
+    opacity: 0.6;
+    top: -30px;
+    left: -20px;
+  }
+  75% {
+    opacity: 0.4;
+    top: -36px;
+    left: -14px;
+  }
+  100% {
+    opacity: 0;
+    top: -40px;
+    left: 2px;
+  }
+}
